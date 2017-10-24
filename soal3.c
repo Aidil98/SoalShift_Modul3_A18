@@ -8,13 +8,14 @@ int main()
     int l = 100;
     int k = 100;    
     int i=1;
-
+    int a;
     while(1)
     {
-        printf("%d",i); //supaya tahu waktunya
+        printf("%d\n",i); //supaya tahu waktunya
         fflush(stdout);
         printf("Lohan                   Kepiting\n");
         printf(" %d                     %d\n",l, k);
+        printf("menu :\n1 kasih makan Lohan\n2 Kasih makan Kepiting\n");
         sleep(1);
         system("clear");
     	i++;
