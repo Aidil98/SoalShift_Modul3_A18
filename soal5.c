@@ -16,8 +16,11 @@ int main(int argv, char *argc[])
 	int find_result = 0;
 	int find_result2 = 0;
 	char tred[512];
-	char s2[1111] = "Fina";
-	char s3[2222] = "Ifah"; 
+	char s2[1111];
+	char s3[2222]; 
+
+	scanf("%s",s2);
+	scanf("%s",s3);
 
 	if(fp==NULL) 
 	{
@@ -26,29 +29,27 @@ int main(int argv, char *argc[])
 
 	while(fgets(tred, line_num, fp)!=NULL) 
 	{
-		if((strstr(tred, "Fina"))!=NULL) 
+		if((strstr(tred, s2))!=NULL) 
 		{
 			find_result++;
 		}
-		if((strstr(tred, "Ifah"))!=NULL)
+		if((strstr(tred, s3))!=NULL)
 		{
 			find_result2++;
 		}
 		line_num++;
 	}
 
-	if(find_result>0) 
+	if(find_result>0 || find_result2>0) 
 	{
 		printf("%s = %d \n", s2, find_result);
 		printf("%s = %d \n", s3, find_result2);
 	}
 	
-	else 
+	else
 	{
-		printf("'%s' gaada.\n", s2);
-		printf("'%s' gaada.\n", s3);
+		printf("duaduanya gaada \n");
 	}
-	
 	
 	if(fp) 
 	{
