@@ -11,10 +11,16 @@ int main()
     int i=1;
     int a;
     void *makan_bang() {
-        printf ("Input angka :\n");
+        printf ("beri makan :\n");
         scanf ("%d", &a);
-        if (a = 1) l=l+10;
-        if (a = 2) k=k+10;
+        if (a == 2) {
+            k=k+10;
+            l=l+0;
+        }
+        if (a == 1) {
+        l=l+10;
+        k=k+0;
+        }
         else printf ("Makan bang\n");
     }
     while(1)
