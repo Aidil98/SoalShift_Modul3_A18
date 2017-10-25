@@ -4,7 +4,9 @@
 #include <pthread.h>
 #include <string.h>
 
-int main() 
+pthread_t tred[512];
+
+int main(int argv, char *argc[]) 
 {
 	FILE *fp;
 
@@ -13,7 +15,7 @@ int main()
 	int line_num = 1;
 	int find_result = 0;
 	int find_result2 = 0;
-	char temp[512];
+	char tred[512];
 	char s2[1111] = "Fina";
 	char s3[2222] = "Ifah"; 
 
@@ -22,13 +24,13 @@ int main()
 		printf("Gaada Filenya");
 	}
 
-	while(fgets(temp, line_num, fp)!=NULL) 
+	while(fgets(tred, line_num, fp)!=NULL) 
 	{
-		if((strstr(temp, "Fina"))!=NULL) 
+		if((strstr(tred, "Fina"))!=NULL) 
 		{
 			find_result++;
 		}
-		if((strstr(temp, "Ifah"))!=NULL)
+		if((strstr(tred, "Ifah"))!=NULL)
 		{
 			find_result2++;
 		}
