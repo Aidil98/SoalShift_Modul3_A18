@@ -7,24 +7,30 @@
 int main() 
 {
 	FILE *fp;
+
+	fp=fopen("/home/parijal/Novel/Novel.txt","r"); 
+
 	int line_num = 1;
 	int find_result = 0;
+	int find_result2 = 0;
 	char temp[512];
-	
-	if((fp = fopen("D:\Projects\Programming Projects\Novel.txt", "r")) == NULL) 
+	char s2[1111] = "Fina";
+	char s3[2222] = "Ifah"; 
+
+	if(fp==NULL) 
 	{
-	return(-1);
+		printf("Gaada Filenya");
 	}
 
-	char s2[100] = "ifah";
-	char s3[100] = "fina";
-	
-	while(fgets(temp, 512, fp) != NULL) 
+	while(fgets(temp, line_num, fp)!=NULL) 
 	{
-		if((strstr(temp, "fina")) != NULL) {
-			printf("A match found on line: %d\n", line_num);
-			printf("\n%s\n", temp);
+		if((strstr(temp, "Fina"))!=NULL) 
+		{
 			find_result++;
+		}
+		if((strstr(temp, "Ifah"))!=NULL)
+		{
+			find_result2++;
 		}
 		line_num++;
 	}
@@ -32,11 +38,13 @@ int main()
 	if(find_result>0) 
 	{
 		printf("%s = %d \n", s2, find_result);
+		printf("%s = %d \n", s3, find_result2);
 	}
 	
 	else 
 	{
-		printf("'%s' does not appear in the sentence.\n", s2);
+		printf("'%s' gaada.\n", s2);
+		printf("'%s' gaada.\n", s3);
 	}
 	
 	
@@ -44,7 +52,6 @@ int main()
 	{
 		fclose(fp);
 	}
-	
 	return 0;
 }
 
