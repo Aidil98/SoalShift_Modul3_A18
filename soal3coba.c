@@ -4,19 +4,11 @@
 #include <pthread.h>
 int main()
 {
-    pthread_t thread_makan;    
     system("clear");
     int l = 100;
     int k = 100;    
     int i=1;
     int a;
-    void *makan_bang() {
-        printf ("Input angka :\n");
-        scanf ("%d", &a);
-        if (a = 1) l=l+10;
-        if (a = 2) k=k+10;
-        else printf ("Makan bang\n");
-    }
     while(1)
     {
         
@@ -30,6 +22,5 @@ int main()
     	i++;
     	if(i%10==0) l=l-15;
     	if(i%20==0) k = k-10;
-        pthread_create(&(thread_makan), NULL, &makan_bang, NULL);
      }
 }
