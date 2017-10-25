@@ -35,8 +35,8 @@ int main()
     	i++;
     	if(i%10==0) l=l-15;
     	if(i%20==0) k = k-10;
-        pthread_create(&(thread_display), NULL, &display, NULL);
-        pthread_create(&(thread_makan), NULL, &makan_bang, NULL);
+        pthread_create(&(thread_display), NULL, &display, NULL); //nampilkan display
+        pthread_create(&(thread_makan), NULL, &makan_bang, NULL); /mau makan
         if (l <= 0 || l > 100 || k <= 0 || k > 100) {
             printf ("Game Over\n");
             break;
