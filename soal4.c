@@ -4,7 +4,6 @@
 #include<stdlib.h>
 #include<unistd.h>
 #include<stdlib.h>
-//#include<conio.h>
 /*******************************************************
 *compile dengan cara gcc -pthread -o [output] input.c *
 *******************************************************/
